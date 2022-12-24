@@ -90,7 +90,9 @@ var finances = [
 
 let totalMonths = (finances.length);
 let sum = 0;
+let subtract = 0;
 let amount = 0;
+let dif = 0;
 
 
 
@@ -105,4 +107,14 @@ for (let i = 0; i < finances.length; i++) {
 
 console.log(sum);
 
+for (let i = 1; i < finances.length; i++) {
+
+    let dif = finances[i][1] - finances[i-1][1];
+
+
+    console.log(dif)
+
+
+    
+}
 
