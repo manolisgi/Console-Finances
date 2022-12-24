@@ -86,3 +86,23 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+let totalMonths = (finances.length);
+let sum = 0;
+let amount = 0;
+
+
+
+console.log(totalMonths);
+
+for (let i = 0; i < finances.length; i++) {
+    const [date, amount ] = finances[i];
+
+    sum += amount;
+    
+}
+
+console.log(sum);
+
+
