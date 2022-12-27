@@ -93,8 +93,8 @@ let sum = 0;
 let subtract = 0;
 let amount = 0;
 let dif = 0;
-
-
+let difArray = [];
+let sumDif = 0;
 
 console.log(totalMonths);
 
@@ -110,11 +110,17 @@ console.log(sum);
 for (let i = 1; i < finances.length; i++) {
 
     let dif = finances[i][1] - finances[i-1][1];
-
-
-    console.log(dif)
-
-
+      
+    // console.log(dif);
     
+    difArray.push(dif);
+
 }
 
+for (let i = 0; i < difArray.length; i++) {
+    
+    sumDif += difArray[i];
+}
+
+console.log(sumDif);
+// console.log(difAverage)
