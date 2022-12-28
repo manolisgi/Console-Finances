@@ -97,7 +97,7 @@ let difArray = [];
 let sumDif = 0;
 let difAverage = 0;
 
-console.log(totalMonths);
+console.log("Total Months : " + totalMonths);
 
 for (let i = 0; i < finances.length; i++) {
     const [date, amount ] = finances[i];
@@ -106,7 +106,7 @@ for (let i = 0; i < finances.length; i++) {
     
 }
 
-console.log(sum);
+console.log("Total : " + sum);
 
 for (let i = 1; i < finances.length; i++) {
 
@@ -126,4 +126,4 @@ for (let i = 0; i < difArray.length; i++) {
 difAverage = sumDif / difArray.length;
 difAverage = Math.abs(difAverage);
 let difAverageFixed = difAverage.toFixed(2);
-console.log(difAverageFixed);
+console.log("Averange Change : $" + difAverageFixed);
