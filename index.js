@@ -92,7 +92,7 @@ let totalMonths = (finances.length);
 let sum = 0;
 let subtract = 0;
 let amount = 0;
-let dif = 0;
+let dif = [];
 let difArray = [];
 let sumDif = 0;
 let difAverage = 0;
@@ -115,26 +115,31 @@ for (let i = 1; i < finances.length; i++) {
     let dif = finances[i][1] - finances[i-1][1];
     difArray.push(dif);
     
-    if (dif[i] > dif[i-1]) {
-        greatestProfit = dif[i]
-    }
+    // if (dif[i] > dif[i-1]) {
+    //     greatestProfit = finances[i]
+    // }
+
+
+    // if (dif[i] > dif[i-1]) {
+    //     greatestProfit = dif[i]
+    // }
     
-    if (dif[i] < dif[i-1]) {
-        greatestLoss = finances[i][dif]
-    }
+    // if (dif[i] < dif[i-1]) {
+    //     greatestLoss = finances[i][dif]
+    // }
 
 }
+
 
 for (let i = 0; i < difArray.length; i++) {
     
     sumDif += difArray[i];
 }
 
-console.log(greatestProfit);
-console.log(greatestLoss);
+
 difAverage = sumDif / difArray.length;
 difAverage = Math.abs(difAverage);
 let difAverageFixed = difAverage.toFixed(2);
 console.log("Averange Change : $" + difAverageFixed);
-// console.log(Math.max(...difArray))
-// console.log(difArray);
+console.log("Greatest Increase in Profits: " + Math.max(...difArray))
+console.log("Greatest Decrease in Profits: " + Math.min(...difArray))
